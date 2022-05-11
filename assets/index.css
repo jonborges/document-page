@@ -1,0 +1,193 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Primeiro o body precisa estar flex */
+
+body {
+    display: flex;
+    background-color: #549196;
+    font-family: arial;
+}
+
+
+/* tirar os enfeites dos links e a COR DOS LINKS */
+
+a {
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* barra lateral esquerda, display flex para organizar em colunas, flex 1 para ser pequena comparado ao Main */
+
+#navbar {
+    position: fixed;
+    width: 320px;
+    flex-direction: column;
+    min-height: 900px;
+    background-color: #803657;
+    border-right: solid 3px rgb(187, 187, 187);
+}
+
+
+/*Barra Mobile, só ativada em telas pequenas */
+
+#navbar-mobile {
+    display: none;
+}
+
+
+/* Para colocar o texto Document no meio, colocar min height e cores */
+
+nav header {
+    color: white;
+    padding: 50px;
+    margin-left: 15px;
+    font-size: 27px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+nav li {
+    padding: 20px;
+    border-top: solid black 2px;
+}
+
+li a {
+    color: white;
+}
+
+
+/* TAMANHO DO MAIN E POSIÇÃO */
+
+main {
+    width: 100%;
+    padding-left: 320px;
+}
+
+
+/*Organizando as sections  */
+
+section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px;
+}
+
+section header {
+    padding: 15px;
+    margin: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+
+/*Separar um pouco o section header dos P */
+
+section h1 {
+    padding-bottom: 15px;
+}
+
+
+/*Tamanho, organização, colocando a bolinha */
+
+section ul {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    list-style: circle;
+}
+
+section li {
+    padding: 15px;
+    font-size: 18px;
+}
+
+
+/*Oganizar os paragrafos */
+
+section p {
+    width: 100%;
+    font-size: 18px;
+    flex-wrap: nowrap;
+    padding: 14px;
+    line-height: 25px;
+}
+
+
+/*pro code crescer e ter padding e margin */
+
+code {
+    background-color: aquamarine;
+    padding: 15px;
+    margin: 15px;
+}
+
+@media (max-width: 320px) {
+    #navbar-mobile {
+        display: block;
+        background-color: #803657;
+        width: 130%;
+    }
+    #navbar-mobile header {
+        padding: 0px;
+        padding-left: 100px;
+    }
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    #navbar {
+        display: none;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    nav header {
+        font-size: 15px;
+        padding: 5px;
+        margin: 10px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+    section li {
+        font-size: 12px;
+    }
+    section p {
+        font-size: 15px;
+    }
+    section header {
+        font-size: 15px;
+    }
+    section h1 {
+        font-size: 19px;
+    }
+    section code {
+        padding: 3px;
+        margin: 0px;
+    }
+}
